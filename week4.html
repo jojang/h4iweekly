@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 4</title>
+    </head>
+    <body>
+        <div>
+            <h2>Variable: <span id="variable"></span></h2>
+            <h3>Counter: <span id="counter"></span></h3>
+            <script>
+                let title = "Week 4"
+                document.getElementById("variable").innerHTML = title;
+            </script>
+        </div>
+        <div class="press">
+            <button type="button" id="add" onclick=add()>+1</button>
+            <button type="button" id="subtract" onclick=subtract()>-1</button>
+            <button type="button" id="reset" onclick=reset()>Reset</button>
+        </div>
+    <script>
+        let count = 0;
+        function add() {
+            count++;
+            document.getElementById("counter").innerHTML = count;
+        }
+        function subtract() {
+            count--;
+            document.getElementById("counter").innerHTML = count;
+        }
+        function reset() {
+            let count = 0;
+            document.getElementById("counter").innerHTML = count;
+        }
+    </script>
+    </body>
+    <style>
+        .press{
+            margin-top: 35px;
+            letter-spacing: 25px;
+        }
+        h2{
+            font-size: 30px;
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            font-size: 20px;
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 10px 24px;
+            border-radius: 12px;
+            border: 2px solid #4CAF50;
+            width: 150px;
+        }
+
+    </style>
+</html>
